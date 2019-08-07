@@ -1,0 +1,60 @@
+/**
+参考資料
+https://cssnewbie.com/making-a-sphere-in-css/#.XUrSyej7R3g
+*/
+.bingo {
+    background:rgb(202,172,139);
+    padding: 10px;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.panel {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background:white;
+    padding:5px;
+}
+
+.panel > div {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: inset -25px -25px 40px rgba(180,255,255,.8);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.panel > div  div {
+    border: inset 1px rgb(100,100,100);
+    border-bottom: none;
+    border-radius: 50% 50% 0px 0px;
+}
+
+.number {
+    user-select: none;
+    font-family: 'Passion One', cursive;
+    line-height: 100px;
+    font-size: 5.5em;
+}
+
+.free {
+    padding:7px;
+    font-size: 2.5em;
+    font-style: italic;
+    color: yellow;
+    background:red;
+    border-radius: 50% 50%;
+}
+
+input[type=checkbox]:not(:checked) + .touchable {
+    
+}
+
+input[type=checkbox]:checked + .touchable {
+    background: black;
+}
+input[type=checkbox]:checked + .touchable .number {
+    visibility: hidden;
+}
